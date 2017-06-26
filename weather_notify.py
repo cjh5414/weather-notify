@@ -8,6 +8,11 @@ TOWN_NUM = '09710104' # 송파구
 NAVER_WEATHER_URL = "http://weather.naver.com/rgn/townWetr.nhn?naverRgnCd=" + TOWN_NUM
 SAVED_IMAGE_PATH = BASE_PATH + '/daily_weather.png'
 
+LINE_NOTIFY_URL = 'https://notify-api.line.me/api/notify'
+LINE_HEADERS = {
+    'Authorization' : 'Bearer ' + 'bAFVjvYYFfNQUsIMKQO4DBwWIHAciM8Nn3VyPv92xkd'
+}
+
 driver = webdriver.Chrome(DRIVER_PATH)
 driver.set_window_size(605,550)
 driver.get(NAVER_WEATHER_URL)
