@@ -9,9 +9,10 @@ NAVER_WEATHER_URL = "http://weather.naver.com/rgn/townWetr.nhn?naverRgnCd=" + TO
 SAVED_IMAGE_PATH = BASE_PATH + '/daily_weather.png'
 
 LINE_NOTIFY_URL = 'https://notify-api.line.me/api/notify'
-LINE_HEADERS = {
+REQUEST_HEADERS = {
     'Authorization' : 'Bearer ' + 'bAFVjvYYFfNQUsIMKQO4DBwWIHAciM8Nn3VyPv92xkd'
 }
+REQUEST_DATA = {'message': 'test', 'imageFile': '@' + SAVED_IMAGE_PATH}
 
 driver = webdriver.Chrome(DRIVER_PATH)
 driver.set_window_size(605,550)
