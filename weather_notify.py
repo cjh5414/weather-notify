@@ -15,6 +15,9 @@ NAVER_WEATHER_URL = "http://weather.naver.com/rgn/townWetr.nhn?naverRgnCd=" + TO
 
 
 def save_current_weather_to_image():
+    import download_chromedriver
+    download_chromedriver.download()
+
     driver = webdriver.Chrome(DRIVER_PATH)
     driver.set_window_size(605,550)
     driver.get(NAVER_WEATHER_URL)

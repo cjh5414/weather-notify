@@ -1,4 +1,11 @@
 files
+__pycache__
 
 # result image file
 daily_weather.png
+
+
+# env
+.env
+
+
