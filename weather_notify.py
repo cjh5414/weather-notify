@@ -1,6 +1,7 @@
 from selenium import webdriver
 import time
 import os
+import sys
 import urllib3
 import json
 
@@ -15,10 +16,16 @@ NAVER_WEATHER_URL = "http://weather.naver.com/rgn/townWetr.nhn?naverRgnCd=" + TO
 
 
 def save_current_weather_to_image():
-    import download_chromedriver
-    download_chromedriver.download()
+    if sys.platform == 'darwin':
+        import download_chromedriver
+        download_chromedriver.download()
+        driver = webdriver.Chrome(DRIVER_PATH)
+    else:
+        from pyvirtualdisplay import Display
+        display = Display(visible=0, size=(605, 550))
+        display.start()
+        driver = webdriver.Firefox()
 
-    driver = webdriver.Chrome(DRIVER_PATH)
     driver.set_window_size(605,550)
     driver.get(NAVER_WEATHER_URL)
     driver.execute_script("window.scrollTo(149, 958)")

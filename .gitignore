@@ -9,3 +9,6 @@ daily_weather.png
 .env
 
 
+# ubuntu
+geckodriver
+

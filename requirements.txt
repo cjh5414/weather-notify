@@ -1,7 +1,9 @@
 certifi==2017.4.17
 chardet==3.0.4
+EasyProcess==0.2.3
 idna==2.5
 py==1.4.32
+PyVirtualDisplay==0.2.1
 requests==2.18.1
-selenium==3.0.2
+selenium==3.4.3
 urllib3==1.21.1
